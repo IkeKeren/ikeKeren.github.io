@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script> -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin&family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <title>Tebak Hari Libur Nasional</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Hallo Kawan Semuaa~ Selamat Datang di</h1>
+            <h1 class="black">Game Tebak Hari <span class="red">Libur Nasional</span></h1>
+            <p>Mari bermain tebak-tebakan hari libur nasional di bawah ini, dan dapatkan score terbaik</p>
+            <p class="aturan-main">Aturan Main : Bila berhasil menebak pertanyaannya dengan benar kamu akan mendapat poin +25, jika salah maka -25. Score maksimal adalah 100,
+            jika scoremu minus (-) tidak apa-apa karena masih bisa dikerjakan hingga selesai. <br>Selamat Mencoba^^</p>
+        </div>
+    </header>
+    <div class="section">
+        <div class="game-section">
+            <h2 class="judul"> Ayo Kita Mulai Permainan</h2>
+        <div  id="soal1" class="container card_game">
+                <h1 class="black">Soal ke-1</h1>
+                <h3>Hari Libur Besar Agama Islam adalah?</h3>
+                <div class="autocomplete">
+                    <input type="text" name="hlibur" id="tjawaban" placeholder="Ketik disini jawaban anda..">
+                </div>
+                <button type="submit" onclick="return validateForm(document.getElementById('tjawaban').value,1)">Kirim Jawaban</button>
+                <p id="hint">Hint : Ketik Hari Raya ___</p>
+        </div>
+        <div id="soal2" class="container card_game">
+                <h1 class="black">Soal ke-2</h1>
+                <h3>Hari Libur Tanggal 17 Agustus adalah?</h3>
+                <div class="autocomplete">
+                    <input type="text" name="hlibur" id="tjawaban2" placeholder="Ketik disini jawaban anda..">
+                </div>
+                <button type="submit" onclick="return validateForm(document.getElementById('tjawaban2').value,2)">Kirim Jawaban</button>
+                <p id="hint">Hint : Ketik Hari ___</p>
+        </div>
+        <div id="soal3" class="container card_game">
+            <h1 class="black">Soal ke-3</h1>
+            <h3>Hari Libur Tanggal 30 Juli adalah?</h3>
+            <div class="autocomplete">
+                <input type="text" name="hlibur" id="tjawaban3" placeholder="Ketik disini jawaban anda..">
+            </div>
+            <button type="submit" onclick="return validateForm(document.getElementById('tjawaban3').value,3)">Kirim Jawaban</button>
+            <p id="hint">Hint : Ketik Tahun ___</p>
+        </div>
+        <div id="soal4" class="container card_game">
+            <h1 class="black">Soal ke-4</h1>
+            <h3>Hari Libur Akhir Bulan Desember 2022 adalah?</h3>
+            <div class="autocomplete">
+                <input type="text" name="hlibur" id="tjawaban4" placeholder="Ketik disini jawaban anda..">
+            </div>
+            <button type="submit" onclick="return validateForm(document.getElementById('tjawaban4').value,4)">Kirim Jawaban</button>
+            <p id="hint">Hint : Ketik Tahun ___</p>
+        </div>
+        
+    </div>
+    </div>
+    <div class="section">
+        <div class="score-section">
+            <div class="container">
+                <h1 id="end-game" style="text-shadow: 2px 2px 4px #1d738d;"></h1>
+                <h1 class="score-title">Total Score Kamu:</h1>
+                <h1 id="total-score" style="margin-top:20px;">---</h1>
+                <h1 id="predikat" class="black" style="margin-top:20px;"></h1>
+            </div>
+        </div>
+        
+    </div>
+    <footer>
+        <h4>&copy;Ike-2022</h4>
+    </footer>
+    <script src="game.js"></script>
+</body>
+</html>
